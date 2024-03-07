@@ -28,7 +28,7 @@ public class ProductController
     @GetMapping("/search/{productName}")
     public List<ProductResponseDTO> searchProduct(@PathVariable String productName)
     {
-        return productService.searchProduct(productName)
+        return productService.searchProduct(productName);
     }
     @GetMapping("/search")
     public List<ProductResponseDTO> searchProductByNameAndPrice(@RequestParam String productName,@RequestParam  int productPrice)
