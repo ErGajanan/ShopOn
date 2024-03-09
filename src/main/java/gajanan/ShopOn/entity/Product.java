@@ -1,4 +1,4 @@
-package gajanan.ShopOn.entiry;
+package gajanan.ShopOn.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,4 +16,6 @@ public class Product
     private String name;
     private int price;
     private String location;
+
+
 }

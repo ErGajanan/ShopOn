@@ -1,4 +1,4 @@
-package gajanan.ShopOn.entiry;
+package gajanan.ShopOn.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -9,7 +9,7 @@ import lombok.Data;
 public class Customer
 {
     @Id
-    private int id;
+    private int id
     private String fname;
     private String lname;
     private String dob;

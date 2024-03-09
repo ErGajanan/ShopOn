@@ -2,7 +2,7 @@ package gajanan.ShopOn.service;
 
 import gajanan.ShopOn.dto.ProductRequestDTO;
 import gajanan.ShopOn.dto.ProductResponseDTO;
-import gajanan.ShopOn.entiry.Product;
+import gajanan.ShopOn.entity.Product;
 import gajanan.ShopOn.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -15,6 +15,7 @@ public class ProductService
 {
     @Autowired
     ProductRepository productRepository;
+
     public String addProduct(ProductRequestDTO productRequestDTO)
     {
 
@@ -29,10 +30,11 @@ public class ProductService
     public List<ProductResponseDTO> getAllProducts()
     {
         List<ProductResponseDTO> productResponseDTOs=new ArrayList<>();
-           ProductResponseDTO productResponseDTO=new ProductResponseDTO();
              List<Product> products=productRepository.findAll();
+        ProductResponseDTO productResponseDTO=new ProductResponseDTO();
              for(Product product:products)
              {
+
                  productResponseDTO.setName(product.getName());
                  productResponseDTO.setPrice(product.getPrice());
                  productResponseDTO.setLocation(product.getLocation());
@@ -45,10 +47,10 @@ public class ProductService
     public List<ProductResponseDTO> searchProduct(String productName)
     {
              List<Product> products=productRepository.findByName(productName);
-             ProductResponseDTO productResponseDTO=new ProductResponseDTO();
              List<ProductResponseDTO> productResponseDTOS=new ArrayList<>();
              for(Product product:products)
              {
+                 ProductResponseDTO productResponseDTO=new ProductResponseDTO();
                  productResponseDTO.setName(product.getName());
                  productResponseDTO.setPrice(product.getPrice());
                  productResponseDTO.setLocation(product.getLocation());
