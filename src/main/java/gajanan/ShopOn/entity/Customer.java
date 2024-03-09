@@ -9,7 +9,7 @@ import lombok.Data;
 public class Customer
 {
     @Id
-    private int id
+    private int id;
     private String fname;
     private String lname;
     private String dob;
