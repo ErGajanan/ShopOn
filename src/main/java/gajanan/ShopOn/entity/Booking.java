@@ -9,6 +9,6 @@ import lombok.Data;
 public class Booking
 {
     @Id
-    private int id
+    private int id;
     private String pickUpLocation;
 }
