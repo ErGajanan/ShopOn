@@ -10,5 +10,5 @@ public class Booking
 {
 
     private int id;
-    private String pickUpLocation;
+    private String pickUpLocation
 }
