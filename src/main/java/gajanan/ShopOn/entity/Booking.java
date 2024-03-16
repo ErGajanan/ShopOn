@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class Booking
 {
-
+@Id
     private int id;
-    private String pickUpLocation
+    private String pickUpLocation;
 }
