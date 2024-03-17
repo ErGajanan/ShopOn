@@ -12,10 +12,11 @@ public class Product
 {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
+    private int id //here is changes are done...
     private String name;
     private int price;
     private String location;
+
 
 
 }
