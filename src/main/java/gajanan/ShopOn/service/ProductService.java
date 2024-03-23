@@ -50,7 +50,7 @@ public class ProductService
              List<ProductResponseDTO> productResponseDTOS=new ArrayList<>();
              for(Product product:products)
              {
-                 ProductResponseDTO productResponseDTO=new ProductResponseDTO();
+                 ProductResponseDTO productResponseDTO=new ProductResponseDTO();//productResponseDTO
                  productResponseDTO.setName(product.getName());
                  productResponseDTO.setPrice(product.getPrice());
                  productResponseDTO.setLocation(product.getLocation());
