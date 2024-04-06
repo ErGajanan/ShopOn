@@ -18,7 +18,7 @@ public class ProductController
     public String addProduct(@RequestBody ProductRequestDTO productRequestDTO)
     {
 
-        return productService.addProduct(productRequestDTO)
+        return productService.addProduct(productRequestDTO);
     }
     @GetMapping("/getAllProducts")
     public List<ProductResponseDTO> getAllProducts()
