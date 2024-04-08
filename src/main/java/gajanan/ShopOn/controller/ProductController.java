@@ -33,7 +33,7 @@ public class ProductController
     @GetMapping("/search")
     public List<ProductResponseDTO> searchProductByNameAndPrice(@RequestParam String productName,@RequestParam  int productPrice)
     {
-        return productService.searchByNameAndPrice(productName,productPrice);
+        return productService.searchByNameAndPrice(productName,productPrice)
     }
     @DeleteMapping("/delete/{productName}")
     public String deleteProduct(@PathVariable String productName)
