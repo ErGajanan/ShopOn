@@ -44,7 +44,7 @@ public class ProductController
     @DeleteMapping("/deleteAllProducts")
     public String deleteProducts()
     {
-        return productService.deleteAllProducts();
+        return productService.deleteAllProducts()
     }
   @PutMapping("/updateProduct/{productName}")
     public String updateAllProduct(@RequestBody ProductRequestDTO productRequestDTO, String productName)
